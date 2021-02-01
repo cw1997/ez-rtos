@@ -5,17 +5,20 @@
 	IMPORT max_task_num
 	IMPORT switch_current_TCB
 	IMPORT is_first_switch_task
+		
+	IMPORT now_tick
 
 	PRESERVE8
 	THUMB
 		
 	AREA CODE, CODE, READONLY
 
-SysTick_Handler PROC	
-	EXPORT SysTick_Handler
+PendSV_Handler PROC	
+	EXPORT PendSV_Handler
 		
 ; turn off all interrupt
     CPSID I
+
 
 ; check PSP, if PSP == 0, this is the first task switch
 ; so we can skip 'save context' and 'select next TCB' step
@@ -43,15 +46,15 @@ restore_context
     LDMIA R0!, {R4-R11}
     MSR PSP, R0
 	ORR LR, LR, #0x4 ; R1 |= 0x04 : lr |= 32'b0000_0000_0000_0100
-	
+
 ; turn on all interrupt
     CPSIE I
 
 ; return
     BX LR
-	
-	NOP
 
 	ENDP
+	
+	NOP
 	
 	END

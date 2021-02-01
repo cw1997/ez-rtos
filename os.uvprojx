@@ -390,9 +390,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Portable</GroupName>
-        </Group>
-        <Group>
           <GroupName>Os</GroupName>
           <Files>
             <File>

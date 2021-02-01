@@ -7,10 +7,13 @@ stack_t stack_1[STACK_SIZE];
 stack_t stack_2[STACK_SIZE];
 stack_t stack_3[STACK_SIZE];
 
+#define DELAY_US 500000
+
 int i0 = 0;
 void task_0() {
     for (;;) {
         i0 = i0 == 0 ? 1 : 0;
+		delay(DELAY_US);
     }
 }
 
@@ -18,6 +21,7 @@ int i1 = 0;
 void task_1() {
     for (;;) {
         i1 = i1 == 0 ? 1 : 0;
+		delay(DELAY_US);
     }
 }
 
@@ -25,6 +29,7 @@ int i2 = 0;
 void task_2() {
     for (;;) {
         i2 = i2 == 0 ? 1 : 0;
+		delay(DELAY_US);
     }
 }
 
@@ -32,6 +37,7 @@ int i3 = 0;
 void task_3() {
     for (;;) {
         i3 = i3 == 0 ? 1 : 0;
+		delay(DELAY_US);
     }
 }
 
