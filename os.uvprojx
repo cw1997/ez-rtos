@@ -407,7 +407,25 @@
               <FileType>1</FileType>
               <FilePath>.\os\os.c</FilePath>
             </File>
+            <File>
+              <FileName>critical_section.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\os\critical_section.c</FilePath>
+            </File>
+            <File>
+              <FileName>critical_section.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\os\critical_section.s</FilePath>
+            </File>
+            <File>
+              <FileName>memory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\os\memory.c</FilePath>
+            </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>Drivers</GroupName>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>

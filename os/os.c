@@ -18,6 +18,7 @@ void SysTick_init(uint32_t us) {
 
 void os_init() {	
     init_task();
+	init_memory();
 }
 
 void os_start() {
