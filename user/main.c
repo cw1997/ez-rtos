@@ -28,7 +28,7 @@ void task_blink_led_0() {
 			GPIOB->ODR |= 1 << 5;
 		}
 		n0 = n0 == 0 ? 1 : 0;
-		delay(DELAY_US);
+		sleep(DELAY_US);
 	}
 }
 
@@ -50,7 +50,7 @@ void task_blink_led_1() {
 			GPIOE->ODR |= 1 << 5;
 		}
 		n1 = n1 == 0 ? 1 : 0;
-		delay(DELAY_US);
+		sleep(DELAY_US);
 	}
 }
 
