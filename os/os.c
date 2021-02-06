@@ -1,5 +1,5 @@
-#include <os.h>
-#include <config.h>
+#include "./os.h"
+#include "./config.h"
 
 void PendSV_init() {
 	NVIC_SetPriority(PendSV_IRQn, 0xFF);

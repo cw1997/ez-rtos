@@ -7,7 +7,6 @@ Task_Control_Block_t tcb_list[CONFIG_MAX_TASK_NUM];
 
 Task_Control_Block_t *current_TCB;
 int max_task_num = CONFIG_MAX_TASK_NUM + 1;
-// for skipping the first task (task_idle), set current_task_id to 1
 int current_task_id = 0;
 int next_task_id = 0;
 int is_first_switch_task = 1;
@@ -21,7 +20,8 @@ void init_task() {
 	current_TCB = &tcb_list[0];
 	__asm {
 		// PSP = 0
-		MSR PSP, #0x0
+		MOV R0, 0x0
+		MSR PSP, R0
 	}
 }
 
