@@ -6,12 +6,14 @@
 Task_Control_Block_t tcb_list[CONFIG_MAX_TASK_NUM];
 
 Task_Control_Block_t *current_TCB;
-int max_task_num = CONFIG_MAX_TASK_NUM + 1;
-int current_task_id = 0;
-int next_task_id = 0;
-int is_first_switch_task = 1;
+uint16_t max_task_num = CONFIG_MAX_TASK_NUM + 1;
+uint16_t current_task_id = 0;
+uint16_t next_task_id = 0;
+uint16_t is_first_switch_task = 1;
 
 uint32_t now_tick = 0;
+
+uint8_t task_switch_enable = 1;
 
 #define STACK_IDLE_SIZE 32
 stack_t stack_idle[STACK_IDLE_SIZE];
@@ -54,7 +56,7 @@ void switch_current_TCB() {
 }
 
 
-int create_task(void *function, void *arguements, stack_t *stack, int stack_size) {
+int8_t create_task(void *function, void *arguements, stack_t *stack, int stack_size) {
     if (next_task_id > CONFIG_MAX_TASK_NUM) {
         return -1;
     }
@@ -90,7 +92,9 @@ void switch_task() {
 
 void SysTick_Handler(void) {
 	++now_tick;
-	switch_task();
+	if (task_switch_enable) {
+		switch_task();
+	}
 }
 
 void sleep(uint32_t us) {
