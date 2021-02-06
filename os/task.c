@@ -93,7 +93,7 @@ void SysTick_Handler(void) {
 	switch_task();
 }
 
-void delay(uint32_t us) {
+void sleep(uint32_t us) {
     uint32_t delay_ticks = us / CONFIG_OS_TICK_TIME_US;
 	uint32_t target_tick = now_tick + delay_ticks;
     current_TCB->delay_ticks = target_tick;

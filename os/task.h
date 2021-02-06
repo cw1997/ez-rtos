@@ -35,7 +35,7 @@ extern void switch_current_TCB(void);
 
 extern void SysTick_Handler(void);
 
-extern void delay(uint32_t us);
+extern void sleep(uint32_t us);
 
 extern void task_idle(void);
 
