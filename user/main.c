@@ -1,11 +1,12 @@
 #include <os.h>
+#include "../drivers/LED.h"
 
-#define STACK_SIZE 32
+#define STACK_SIZE 256
 
 stack_t stack_0[STACK_SIZE];
 stack_t stack_1[STACK_SIZE];
 
-#define DELAY_US 500000
+#define DELAY_US 2000000
 
 int *i0;
 int *i1;
@@ -50,31 +51,14 @@ void task_blink_led_1() {
 			GPIOE->ODR |= 1 << 5;
 		}
 		n1 = n1 == 0 ? 1 : 0;
+		// uint8_t str[] = "cw1997";
+		// usart_send(str);
+//		putchar('c');
+//		putchar('w');
+		uint8_t str[] = "VGA RAMDAC, Powered By Cyclone II, Code By cw1997 ( 867597730@qq.com )          ";
+		puts(str);
 		sleep(DELAY_US);
 	}
-}
-
-void LED_init() {
-	Critical_Section_Start();
-	
-    // open GPIOB clock
-	RCC->APB2ENR |= 1 << 3;
-    // open GPIOE clock
-	RCC->APB2ENR |= 1 << 6;
-	   	 
-	GPIOB->CRL &= 0xff0fffff;
-    // set GPIOB.5 type = push-pull output
-	GPIOB->CRL |= 0x00300000; 
-    // set GPIOB.5 level = high, it means turn off LED
-    //GPIOB->ODR |= 1 << 5;
-											  
-	GPIOE->CRL &= 0xff0fffff;
-    // set GPIOE.5 type = push-pull output
-	GPIOE->CRL |= 0x00300000;
-    // set GPIOE.5 level = high, it means turn off LED
-	GPIOE->ODR |= 1 << 5;
-	
-	Critical_Section_End();
 }
 
 int main(void) {

@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "task.h": "c",
+        "config.h": "c",
+        "os.h": "c",
+        "font.h": "c",
+        "FONT.H": "cpp",
+        "led.h": "c"
+    }
+}
