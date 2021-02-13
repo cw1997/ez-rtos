@@ -6,7 +6,7 @@
 stack_t stack_0[STACK_SIZE];
 stack_t stack_1[STACK_SIZE];
 
-#define DELAY_US 2000000
+#define DELAY_US 500000
 
 int *i0;
 int *i1;
