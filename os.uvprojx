@@ -427,11 +427,6 @@
               <FileType>1</FileType>
               <FilePath>.\os\io.c</FilePath>
             </File>
-            <File>
-              <FileName>font.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\os\font.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

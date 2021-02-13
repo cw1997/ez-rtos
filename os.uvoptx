@@ -125,7 +125,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGDARM</Key>
-          <Name>(1010=1298,523,1674,1080,0)(1007=1056,139,1243,414,0)(1008=1200,95,1576,331,0)(1009=1420,531,1664,1079,0)(100=1185,368,1831,1041,0)(110=60,88,280,548,0)(111=-1,-1,-1,-1,0)(1011=-1,-1,-1,-1,0)(180=120,153,415,450,0)(120=-1,-1,-1,-1,0)(121=788,637,1209,1064,0)(122=-1,-1,-1,-1,0)(123=-1,-1,-1,-1,0)(124=75,104,496,531,0)(125=-1,-1,-1,-1,0)(126=-1,-1,-1,-1,0)(140=-1,-1,-1,-1,0)(240=-1,-1,-1,-1,0)(190=-1,-1,-1,-1,0)(200=-1,-1,-1,-1,0)(170=120,153,405,449,0)(130=-1,-1,-1,-1,0)(131=-1,-1,-1,-1,0)(132=-1,-1,-1,-1,0)(133=-1,-1,-1,-1,0)(160=1275,644,1723,1058,1)(161=-1,-1,-1,-1,0)(162=-1,-1,-1,-1,0)(210=-1,-1,-1,-1,0)(211=-1,-1,-1,-1,0)(220=-1,-1,-1,-1,0)(221=-1,-1,-1,-1,0)(230=-1,-1,-1,-1,0)(234=308,356,824,709,0)(231=-1,-1,-1,-1,0)(232=-1,-1,-1,-1,0)(233=-1,-1,-1,-1,0)(150=-1,-1,-1,-1,0)(151=-1,-1,-1,-1,0)</Name>
+          <Name>(1010=1298,523,1674,1080,0)(1007=1056,139,1243,414,0)(1008=1200,95,1576,331,0)(1009=1420,531,1664,1079,0)(100=1185,368,1831,1041,0)(110=60,88,280,548,0)(111=-1,-1,-1,-1,0)(1011=-1,-1,-1,-1,0)(180=120,153,415,450,0)(120=-1,-1,-1,-1,0)(121=719,418,1140,845,1)(122=-1,-1,-1,-1,0)(123=-1,-1,-1,-1,0)(124=1136,420,1557,847,1)(125=-1,-1,-1,-1,0)(126=-1,-1,-1,-1,0)(140=-1,-1,-1,-1,0)(240=-1,-1,-1,-1,0)(190=-1,-1,-1,-1,0)(200=-1,-1,-1,-1,0)(170=120,153,405,449,0)(130=-1,-1,-1,-1,0)(131=-1,-1,-1,-1,0)(132=-1,-1,-1,-1,0)(133=-1,-1,-1,-1,0)(160=1120,404,1568,818,0)(161=-1,-1,-1,-1,0)(162=-1,-1,-1,-1,0)(210=-1,-1,-1,-1,0)(211=-1,-1,-1,-1,0)(220=-1,-1,-1,-1,0)(221=-1,-1,-1,-1,0)(230=-1,-1,-1,-1,0)(234=308,356,824,709,0)(231=-1,-1,-1,-1,0)(232=-1,-1,-1,-1,0)(233=-1,-1,-1,-1,0)(150=-1,-1,-1,-1,0)(151=-1,-1,-1,-1,0)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -151,70 +151,6 @@
       <Breakpoint>
         <Bp>
           <Number>0</Number>
-          <Type>0</Type>
-          <LineNumber>84</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134219992</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\os\io.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\os\os/io.c\84</Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
-          <LineNumber>20</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134220670</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\drivers\usart.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\os\drivers/usart.c\20</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>54</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134218528</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\os\task.s</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\os\os/task.s\54</Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
-          <LineNumber>59</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>.\User\main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
-        </Bp>
-        <Bp>
-          <Number>4</Number>
           <Type>0</Type>
           <LineNumber>89</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -454,7 +390,7 @@
       <GroupNumber>2</GroupNumber>
       <FileNumber>4</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>.\os\os.c</PathWithFileName>
@@ -502,23 +438,11 @@
       <GroupNumber>2</GroupNumber>
       <FileNumber>8</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>.\os\io.c</PathWithFileName>
       <FilenameWithoutPath>io.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>9</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>1</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\os\font.c</PathWithFileName>
-      <FilenameWithoutPath>font.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -532,7 +456,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>10</FileNumber>
+      <FileNumber>9</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -544,9 +468,9 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>11</FileNumber>
+      <FileNumber>10</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>.\drivers\usart.c</PathWithFileName>
