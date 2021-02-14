@@ -30,7 +30,7 @@ extern void switch_task(void);
 // proc from c
 extern void init_task(void);
 
-extern int8_t create_task(void *function, void *arguements, stack_t *stack, int stack_size);
+extern uint16_t create_task(void *function, void *arguements, stack_t *stack, int stack_size);
 
 extern void switch_current_TCB(void);
 

@@ -56,9 +56,9 @@ void switch_current_TCB() {
 }
 
 
-int8_t create_task(void *function, void *arguements, stack_t *stack, int stack_size) {
+uint16_t create_task(void *function, void *arguements, stack_t *stack, int stack_size) {
     if (next_task_id > CONFIG_MAX_TASK_NUM) {
-        return -1;
+        return 0;
     }
 
     stack_t *stack_top = &stack[stack_size];
