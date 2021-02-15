@@ -1,21 +1,21 @@
-	IMPORT tcb_list
-	IMPORT current_TCB
-	IMPORT current_task_id
-	IMPORT next_task_id
-	IMPORT max_task_num
-	IMPORT switch_current_TCB
-	IMPORT is_first_switch_task
-		
-	IMPORT now_tick
+    IMPORT tcb_list
+    IMPORT current_TCB
+    IMPORT current_task_id
+    IMPORT next_task_id
+    IMPORT max_task_num
+    IMPORT switch_current_TCB
+    IMPORT is_first_switch_task
+        
+    IMPORT now_tick
 
-	PRESERVE8
-	THUMB
-		
-	AREA CODE, CODE, READONLY
+    PRESERVE8
+    THUMB
+        
+    AREA CODE, CODE, READONLY
 
 PendSV_Handler PROC	
-	EXPORT PendSV_Handler
-		
+    EXPORT PendSV_Handler
+        
 ; turn off all interrupt
     CPSID I
 
@@ -24,7 +24,7 @@ PendSV_Handler PROC
 ; so we can skip 'save context' and 'select next TCB' step
     MRS R0, PSP
     ; if r0 == 0, jump to restore_context
-	; LDR R1, =is_first_switch_task
+    ; LDR R1, =is_first_switch_task
     CBZ R0, restore_context
 
 save_context
@@ -35,9 +35,9 @@ save_context
     STR R0, [R1]
 
 select_next_TCB
-	PUSH {LR}
+    PUSH {LR}
     BL switch_current_TCB
-	POP {LR}
+    POP {LR}
 
 restore_context
     LDR R0, =current_TCB
@@ -45,7 +45,7 @@ restore_context
     LDR R0, [R0]
     LDMIA R0!, {R4-R11}
     MSR PSP, R0
-	ORR LR, LR, #0x4 ; R1 |= 0x04 : lr |= 32'b0000_0000_0000_0100
+    ORR LR, LR, #0x4 ; R1 |= 0x04 : lr |= 32'b0000_0000_0000_0100
 
 ; turn on all interrupt
     CPSIE I
@@ -53,8 +53,8 @@ restore_context
 ; return
     BX LR
 
-	ENDP
-	
-	NOP
-	
-	END
+    ENDP
+    
+    NOP
+    
+    END

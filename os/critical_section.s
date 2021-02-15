@@ -4,23 +4,23 @@
     PRESERVE8
 
 store_PRIMASK PROC
-	EXPORT store_PRIMASK
-		
+    EXPORT store_PRIMASK
+        
     MRS     R0, PRIMASK
     CPSID   I
-	
-	; return
-	BX LR
+    
+    ; return
+    BX LR
 
     ENDP
 
 restore_PRIMASK PROC
-	EXPORT restore_PRIMASK
-		
+    EXPORT restore_PRIMASK
+        
     MSR     PRIMASK, R0
-	
-	; return
-	BX LR
+    
+    ; return
+    BX LR
 
     ENDP
 
